@@ -1,0 +1,6 @@
+
+/* This makes sure HTML takes up window. */
+html {
+  height: 100%;
+  font-size: 100%;
+}
