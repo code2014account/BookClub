@@ -22,10 +22,12 @@
   <body>
 
 
+    <form action="javascript:void(0);" method="POST" onsubmit="bookshelf.Add()">
+      <input type="text" id="a-book" placeholder="New Book!">
+      <input type="submit" value ="Add">
+    </form>
 
-  <div class="container">
-
-    <p id="counter"></p>
+    <p id="bookcounter"></p>
 
     <table id="bcID" title="Library" class="table table-hover">
       <thead>
@@ -35,7 +37,7 @@
           <th field="remove">Remove</th>
         </tr>
       </thead>
-      <tbody ="books">
+      <tbody id="books">
 
 
 
