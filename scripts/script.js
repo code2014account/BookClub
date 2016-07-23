@@ -1,53 +1,55 @@
 
 var bookshelf = new function() {
-  this.el = document.getElementById('books');
+  this.elemento = document.getElementById('books');
   this.books = [];
 
-  this.Count = function(book) {
-    var element = document.getElementById('bookcounter');
-    var name = 'title'
+  this.Count = function(abook) {
+    var elemento = document.getElementById('bookcounter');
+    var name = 'book'
 
-    if (book) {
-      if (book > 1) {
+    if (abook) {
+      if (abook > 1) {
       name = 'title';
     }
-      element.innherHTML = book + ' ' + name ;
+      elemento.innherHTML = abook + ' ' + name ;
     } else {
-      element.innherHTML = 'No' + ' ' + name;
+      elemento.innherHTML = 'No' + ' ' + name;
     }
   };
 
+  this.Add = function() {
+    elemento = document.getElementById('a-book');
+
+    var book = elemento.value;
+
+    if (book) {
+      this.books.push(book.trim());
+      elemento.value = '';
+      this.showAll();
+    }
+  };
+
+
   this.showAll = function() {
-    var book = '';
+    var abook = '';
 
     if (this.books.length > 0) {
       for (i = 0; i < this.books.length ; i++) {
-        book += '<tr>';
-        book += '<td>' + this.books[i] + '<td>';
-        book += '<tr>';
-        book += '<td><button onclick="bookshelf.Edit(' + i + ')">Change Title</button></td>';
-        book += '<td><button onclick="bookshelf.Delete(' + i + ')">Delete Book</button></td>';
+        abook += '<tr>';
+        abook += '<td>' + this.books[i] + '<td>';
+        abook += '<tr>';
+        abook += '<td><button onclick="bookshelf.Edit(' + i + ')">Change Title</button></td>';
+        abook += '<td><button onclick="bookshelf.Delete(' + i + ')">Delete Book</button></td>';
       }
     }
-
     this.Count(this.books.length);
-    return this.element.innerHTML = book;
+    return this.elemento.innerHTML = abook;
   };
+}
 
 
 
 
-    this.Add = function() {
-      element = document.getElementById('a-book');
-
-      var book = element.value;
-
-      if (book) {
-        this.books.push(book.trim());
-        element.value = '';
-        this.showAll();
-      }
-    };
 
     this.Edit = function(trash) {
       var elemento = document.getElementById('edit-name');
@@ -56,7 +58,7 @@ var bookshelf = new function() {
       document.getElementById('impala').style.display = 'block';
       self = this;
 
-      document.getElementById('impala').style.display = function() {
+      document.getElementById('saveEdit').onsubmit = function() {
         var book = elemento.value;
 
         if (book) {
@@ -71,8 +73,6 @@ var bookshelf = new function() {
       this.books.splice(trash, 1);
       this.showAll();
     };
-    
-}
 
 bookshelf.showAll();
 
