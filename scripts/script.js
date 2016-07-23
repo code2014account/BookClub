@@ -1,5 +1,5 @@
-var showBooks = []
+var bookshelf = new function() {
 
-var AddBook = function() {
+
 
 }
