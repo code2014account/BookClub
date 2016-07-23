@@ -29,7 +29,6 @@ var bookshelf = new function() {
     }
   };
 
-
   this.showAll = function() {
     var abook = '';
 
@@ -45,10 +44,6 @@ var bookshelf = new function() {
     this.Count(this.books.length);
     return this.elemento.innerHTML = abook;
   };
-}
-
-
-
 
 
     this.Edit = function(trash) {
@@ -73,6 +68,7 @@ var bookshelf = new function() {
       this.books.splice(trash, 1);
       this.showAll();
     };
+}
 
 bookshelf.showAll();
 
