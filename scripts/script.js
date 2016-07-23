@@ -47,7 +47,7 @@ var bookshelf = new function() {
 
 
     this.Edit = function(trash) {
-      var elemento = document.getElementById('edit-name');
+      var elemento = document.getElementById('edit-book');
       elemento.value = this.books[trash];
 
       document.getElementById('impala').style.display = 'block';
