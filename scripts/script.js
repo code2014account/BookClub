@@ -1,14 +1,15 @@
+
 var bookshelf = new function() {
-  this.element = document.getElementById('books');
-  this.books = []
+  this.el = document.getElementById('books');
+  this.books = [];
 
   this.Count = function(book) {
     var element = document.getElementById('bookcounter');
-    var name = 'book'
+    var name = 'title'
 
     if (book) {
       if (book > 1) {
-      name = 'books';
+      name = 'title';
     }
       element.innherHTML = book + ' ' + name ;
     } else {
@@ -24,12 +25,16 @@ var bookshelf = new function() {
         book += '<tr>';
         book += '<td>' + this.books[i] + '<td>';
         book += '<tr>';
+        book += '<td><button onclick="bookshelf.Edit(' + i + ')">Change Title</button></td>';
+        book += '<td><button onclick="bookshelf.Delete(' + i + ')">Delete Book</button></td>';
       }
     }
 
     this.Count(this.books.length);
     return this.element.innerHTML = book;
   };
+
+
 
 
     this.Add = function() {
@@ -43,4 +48,34 @@ var bookshelf = new function() {
         this.showAll();
       }
     };
-};
+
+    this.Edit = function(trash) {
+      var elemento = document.getElementById('edit-name');
+      elemento.value = this.books[trash];
+
+      document.getElementById('impala').style.display = 'block';
+      self = this;
+
+      document.getElementById('impala').style.display = function() {
+        var book = elemento.value;
+
+        if (book) {
+          self.books.splice(trash, 1, book.trim());
+          self.showAll();
+          closeInput();
+        }
+      }
+    };
+
+    this.Delete = function(trash) {
+      this.books.splice(trash, 1);
+      this.showAll();
+    };
+    
+}
+
+bookshelf.showAll();
+
+function closeInput() {
+  document.getElementById('impala').style.display = 'none';
+}
