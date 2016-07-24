@@ -38,6 +38,7 @@ var bookshelf = new function() {
         abook += '<td>' + this.books[i] + '<td>';
         abook += '<tr>';
         abook += '<td><button onclick="bookshelf.Edit(' + i + ')">Edit</button></td>';
+        abook += '<tr>';
         abook += '<td><button onclick="bookshelf.Delete(' + i + ')">Delete</button></td>';
       }
     }

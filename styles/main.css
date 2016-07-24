@@ -29,6 +29,14 @@ html {
   float: left;
   margin: 20px;
 }
+
+.nutrition-facts {
+  font-size: 1.1rem;
+}
+
+
+/* CSS from here down is taken from https://codepen.io/chriscoyier/pen/egHEK*/
+
 body {
   font-size: small;
   line-height: 1.4;
@@ -90,11 +98,6 @@ p {
   }
 }
 
-.nutrition-facts {
-  font-size: 1.1rem;
-}
-
-
 .small-info {
   font-size: 0.7rem;
 }
@@ -143,3 +146,5 @@ p {
 .thin-end {
   border-bottom: 1px solid black;
 }
+
+/* end codepen css here*/
