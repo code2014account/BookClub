@@ -89,6 +89,12 @@ p {
     }
   }
 }
+
+.nutrition-facts {
+  font-size: 1.1rem;
+}
+
+
 .small-info {
   font-size: 0.7rem;
 }
