@@ -16,7 +16,7 @@ To run my app follow these steps...
 
 If you don't want to open up the file locally you can see it running in full on codepen with this link...
 
-https://codepen.io/chriscoyier/pen/egHEK
+http://codepen.io/matt24ray/pen/QEAObQ
 
 With this SPA you can keep track of the books in your library. You can add new books, remove books, and change the name of the books in your library.
 
