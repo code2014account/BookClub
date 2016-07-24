@@ -9,6 +9,15 @@ html {
   display: none;
 }
 
+
+#a-book {
+  border: 0;
+}
+
+#a-button {
+  border: 0;
+}
+
 ::-webkit-input-placeholder {
    color: black;
 }
