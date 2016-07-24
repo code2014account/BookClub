@@ -8,3 +8,15 @@ html {
 #impala{
   display: none;
 }
+
+#a-book {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#a-button {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
