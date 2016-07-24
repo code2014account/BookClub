@@ -37,8 +37,8 @@ var bookshelf = new function() {
         abook += '<tr>';
         abook += '<td>' + this.books[i] + '<td>';
         abook += '<tr>';
-        abook += '<td><button onclick="bookshelf.Edit(' + i + ')">Change Title</button></td>';
-        abook += '<td><button onclick="bookshelf.Delete(' + i + ')">Delete Book</button></td>';
+        abook += '<td><button onclick="bookshelf.Edit(' + i + ')">Edit</button></td>';
+        abook += '<td><button onclick="bookshelf.Delete(' + i + ')">Delete</button></td>';
       }
     }
     this.Count(this.books.length);
